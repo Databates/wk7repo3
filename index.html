@@ -1,0 +1,162 @@
+<!-- NOTES  
+
+<p>Call us <br>   THE BREAK LINE code 
+  EMAIL us</p>
+
+HTML Entity: 
+Escape special character: &amp; => &
+Use it for special symbols => &copy; => copyright sign. 
+
+HTML Entities: 
+http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#Character_entity_references_in_HTML
+
+Quiz
+1- An HTML entity allows for the display of special reserved characters in HTML, such as ampersands or angle brackets. 
+2- proper class attribute: <div class="featured-cupcake">
+3- proper image: <img src="img/flower.jpg" alt="Pic of flower.">
+
+
+CSS: 
+http://github.com/necolas/normalize.css
+
+To help with cross browser compatibility we use normalize.css
+
+grid - Gridulator.com
+template for layout. Framework.
+very professional. 
+Reuse Code. Code already writtten
+
+clearfix - solves a lot of cross browser problems. Tested by many. Reuse. 
+
+
+Comments - HTML vs CSS /*  */  vs Ruby #
+
+
+Sublime Trick
+Group indent - (1) Highlight Area. (2) CMD + Right ] or Left [
+
+
+Part 4. Video 1. Styling Content
+Webfonts: google.com/webfonts - easy to add to  your site and licensing is simple. 
+Search for Nunito. Click Quick-Use. Copy & Paste link to google's hosted style sheet. 
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>Smells Like Bakin</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen"> <!--base layer. Don't want grid to override normalize. Order of Pref -->
+  <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">   
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>   
+  <link rel="stylesheet" href="css/style1.css" type="text/css" media="screen">
+
+
+<!-- <style>
+    body {
+	   background-color: #420600; 
+    }
+
+    h1 {
+	   color: #FAF3BC; 
+	   font-size: 56px;
+    }
+    p {
+	   color: #FAF3BC;
+    }
+    a{
+      color: green;
+    }
+
+  </style> -->
+</head>
+<body>
+  <div class="container clearfix">  <!--This is a wrapper or container div. Contains our page inside the body element.-->
+    <div class="grid_4">
+      <img src = 'img/logo.gif' alt = "picture should load." >
+    </div>
+
+<!--
+    <h1>Smells Like Bakin</h1>
+    <p>We combine unexpected flavors that melt together to create ironically delicious desserts.</p>
+
+    <p>You can find a good css reference guide at <a href="http://www.w3.org/TR/CSS21/propidx.html">w3schools</a>
+-->
+    <div class="grid_8 omega">
+      <ul class="nav"> 
+      	<li><a href="#">About</a>
+      	<li><a href="#">Cupcakes &amp; Prices</a></li>
+      	<li><a href="#">Locations</a></li>
+        <li class="last"><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div id="intro" class="grid_9">
+      <h1>Opposites reall do attract, especially in our kitchen...ironically delicious desserts</h1>
+      <p><a href="#" class="btn">Browse Our Cupcakes</a></p>
+    </div>
+
+    <div class="grid_3 omega">
+      <img src= "img/you-bake-me-blush.gif" alt = "You bake me blush">
+    </div>
+
+    <div id="featured-cupcake" class="grid_7">
+      <h2>Cupcake of the Week</h2>
+      <p>This week's featured cupcake is the <a href="#">Avocado Chocolate cupcake</a>. It's strange combo of flavors will kick your taste buds into fiesta mode!</p>
+      <img src="img/featured-cupcake.jpg" alt="Avocado Chocolate Cupcake">
+    </div>
+
+    <div id="new-cupcakes" class="grid_5 omega">
+      <h2>Fresh Out the Oven</h2>
+      <p>Our newest cupcakes are <a href="#">Bacon Me Crazy</a> and <a href="#">Jalapeno So Spicy</a>.</p>
+      <img src="img/new-cupcake-bacon.jpg" alt="Bacon Me Crazy">
+      <img src="img/new-cupcake-jalapeno.jpg" alt="Jalapeno So Spicy">
+    </div>
+
+    <div class="grid_7">
+      <h2>Inside the Kitchen</h2>
+      <p>Smells Like Bakin' started in the garage of the husband &amp; wife duo</p> <!--html entity to display special character-->
+      <!--always start with $ and end with ;. Here we are trying to get &. coincidence. -->
+      <p><a href="#" class="btn-small">Read More</a></p>
+    </div>
+
+    <div class="grid_5 omega">
+      <h2>Get Bakin' with Us</h2>
+
+      <div id="contact">
+        <p>Call us: <span>1-555-CUP-CAKE</span><br> <!--Be invisible & inline with the rest of the text-->
+        Email us: <a href="#">support@SmellsLikeBacon.com</a></p>
+      </div>
+
+      <p>We announce all of our new flavors first through Facebook &amp; Twitter, and even take requests!</p>
+      <a href="http://www.facebook.com/SmellsLikeBakin"><img src="img/facebook.gif" alt = "facebook"></a>
+      <a href="http://www.twitter.com/#!/smellslikebakin"><img src="img/twitter.gif" alt = "Twitter"></a>
+    </div>
+
+    <div id="copyright" class="grid_12">
+      <p>&copy; 2012 Smells Like Bakin' Cupcake Company, LLC. All Rights Reserved.</p> <!--HTML entity &copy; -->
+    </div>
+
+
+    <!-- the SPAN tag 
+    span tag is basically a container or what is called an inline element. 
+    Later when styling this with CSS, we will want to select just the phone number part of the text. 
+    So we have to wrap an HTML element around the number text so we can identify it with CSS.  
+    But we don't want to use what is called a block line element to target the number text b/c that pushes the content around 
+
+    push other content down the page. 
+
+    Instead, we want the html identifier to be invisible and be INLINE with the rest of the text. 
+
+    -->
+
+    <!--only single id per page.  #id??
+    multiple classes and apply them to as many elements as you like. .class -->
+    </div> <!--This is the wrapper div's closing div-->
+</body>
+</html>

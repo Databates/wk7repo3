@@ -1,0 +1,186 @@
+/* style1.css */
+
+body {
+	font-family: 'Nunito', sans-serif; 
+	color: #FAF3BC; /* Guess: FA Highest value F with A after that. Pretty high up with green. Slightly less blue. RGB turned up pretty high, close to white but with some oof blue removed. Look a bit yellow!;  */
+	background: #420600 url('img/bg-texture.jpg') repeat; /* Set image to repeat in case the image runs out in a given browser. */
+}
+
+a {
+	color: #4FB69F;
+	text-decoration: none; /* underline */
+}
+
+h1 {
+	font-size: 1.750em;  /*size of h1. ems are relative unit of measurement. */
+	letter-spacing: -1.5px;
+}
+
+h2 {
+	font-size: 1.500em; 
+	color: #B4C34F;
+}
+
+.btn {
+	color: #FAF3BC; /* same color as body. Button is actually a link. Being overriden by a selector above. So we want to override just this a link */
+	background: #4FB69F url('img/texture.png') no-repeat right top; /* sets the positioning of background image. Start @ right side of element and start at top. upper right corner  */
+		/*To set a background image there can be NO SPACE b/t url ('link to hosted image')!!!! */
+
+/* Make the clickable area bigger with Margin & Padding: 
+
+Box Model: in general referring to the padding & margin relationship;
+*/
+	
+	padding: 15px 30px;  /* 4 Numbers: top, right, bottom, left  OR  2 Numbers: (Top & bottom) and (left & right) */
+
+	margin: 40px 0px; /* (Top & Bottom) = 40px (right & left) = 0px This gives us some more space on top & bottom */
+
+	/* CSS property to add a little more detail. Called Border-Radius 
+		This will add rounded corners to our button instead of the squared off corners. 
+		The higher the value, the more curvey the corners will be. 
+		5px => the borders/corners won't be very rounded at all. 
+
+	*/
+
+	border-radius: 25px;
+
+	/* We want all of our text to be uppercase. So we use: */
+
+	text-transform: uppercase; 
+
+}
+
+
+
+/* Use pseudo class called hover.  
+ 	To apply a pseudo class we apply a colon : 
+
+*/
+.btn:hover {
+	background-color: purple; /* #4CC4A7; */
+}
+
+
+
+/* Want to change the menu to a horizontal one across the page. 
+
+unorderd list element selector
+Add a class selector "nav" which we assigned to these 4 links in the HTMl so they could serve as our nav bar. 
+*/
+
+ul.nav {
+	margin: 120px 0 0 0 ;  /* set 120 px of margin on top and then zero out the rest of our margin. */
+	list-style: none; /* we want to remove the bullet points. (No specific List style. */
+	float: right; /* Then we will float it over to the right. */
+}
+
+/* Now we target the specific list items  
+	This selects all of those list items inside of that list. 
+*/
+
+
+
+ul.nav li {
+	float: left;  /* Float those list items to the left. */
+	/* this will make it so that each list item will be in line with one another instead of blocking one another and pushing each element down to the next line. */
+	margin-right: 40px; /* Otherwise there would not be any space b/t each one of our list items. They would all be bunched together. */
+}
+
+/*Now we want to clean up the links inside these list items
+We want the LINKS in the LIST ITEMS to be a slightly different color. 
+Select the anchor tags inside of each LIST ITEM which is inside our unordered list w/ the class navigation: 
+ */
+
+ ul.nav li a {
+ 	color: #FAF3BC;
+
+ }
+
+
+/* Now we need to style some other parts of the page 
+Select the INTRO by using the ID SELECTOR #
+*/
+
+#intro {
+	margin: 50px 0 75px 0;
+
+}
+
+
+/*Now we want to style some of our images */
+
+#new-cupcakes img {     /* select the images inside of ID new-cupcake  */
+	border: 8px dashed #FAF3BC;  /* thickness, style(solid, dotted, dashed), color */
+	margin: 0 0 20px 0;
+}
+
+#featured-cupcake img {
+	border: 8px dashed #FAF3BC;
+
+}
+
+/* Now let's style our copyright bitches */
+
+#copyright {
+	border-top: 8px solid #2A0400; /* We can select where your borders are applied by adding a dash and keyword like top, right, bottom, left.   */
+	padding: 10px 0px;
+	margin: 15px 0px;
+	text-align: center;	 /* We want to center our text in the copyright. 
+							You only use text-align to center the text that is inside an element. 
+							This won't actually move the box of the html element. 
+							text-align simply moves the text inside of that element. 
+							Do not use text-align to try and layout your page. 
+							Do not use it to move elements to the left or right.
+							ONLY USE IT to align the text that is inside of an element. 
+							*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
